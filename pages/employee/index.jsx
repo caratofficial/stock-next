@@ -9,7 +9,7 @@ export default function Home(props) {
   const list = employees.map((employee) => (
     <li key={employee.id}>
       <Link href={`/employee/${employee.id}`}>
-        {employee.title}
+        {employee.job_title}
       </Link>
     </li>
   ))
