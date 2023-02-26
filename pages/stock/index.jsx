@@ -9,7 +9,7 @@ export default function Home({ stocks }) {
       {
         method: 'DELETE'
       })
-      .then(res => res.json())
+      .then(res1 => res1.json())
       .then(data => {
         // alert("Deleting " + id)
         window.location.reload(false);
@@ -49,8 +49,8 @@ export default function Home({ stocks }) {
   )
 }
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/stock/products/`)
-  const stocks = await res.json()
+  const res1 = await fetch(`http://localhost:3000/api/stock/products/`)
+  const stocks = await res1.json()
   // console.debug('blog 1', blogs)
   return { props: { stocks } }
 }
