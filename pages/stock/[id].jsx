@@ -3,7 +3,7 @@ import Link from "next/link"
 
 // Step 2: This component is rendered from the server (Server-Side Rendering) SSR
 export default function Stocks({ stock }) {
-  console.log('stock 2', stock)
+  //console.log('stock 2', stock)
   if (!stock) return (
     <div>
       <p>Stock not found</p>
