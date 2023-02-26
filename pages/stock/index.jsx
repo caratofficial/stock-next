@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 export default function Home({ stocks }) {
 
   function deleteStock(id) {
-    fetch(`http://localhost:3000/api/stock/products/${id}`,
+    fetch(`/api/stock/products/${id}`,
       {
         method: 'DELETE'
       })
@@ -49,7 +49,7 @@ export default function Home({ stocks }) {
   )
 }
 export async function getServerSideProps() {
-  const res1 = await fetch(`http://localhost:3000/api/stock/products/`)
+  const res1 = await fetch(`/api/stock/products/`)
   const stocks = await res1.json()
   // console.debug('blog 1', blogs)
   return { props: { stocks } }
